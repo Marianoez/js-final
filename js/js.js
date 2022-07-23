@@ -1,4 +1,4 @@
-import { getData } from "./getData.js";
+import { getData } from "./getData.js"; //Llama a funcion para obtener base de datos desde JSON.
 
 const allProducts = await getData();
 const productContainer = document.getElementById("product-main")
@@ -9,9 +9,13 @@ const cartDiv = document.getElementById('cart')
 const productCart = document.getElementById("items-compra")
 const cart = []
 
+//Cargamos todos los productos.
 showAllp(allProducts)
+
+//Recuperamos informacion de carrito.
 recuperar2()
 
+//Funcion de recuperacion de carrito con local storage.
 function recuperar2() {
     let recuperarLS = JSON.parse(localStorage.getItem('cart')) || []
     recuperarLS.forEach(element => {
@@ -19,6 +23,7 @@ function recuperar2() {
     })
 }
 
+//Funcion de Mostrar todos los productos.
 function showAllp(products) {
     productContainer.innerHTML = "";
     products.forEach(element => {
@@ -43,21 +48,13 @@ function showAllp(products) {
         productContainer.appendChild(newDiv);
         let btnAdd = document.getElementById(`btnAdd1${element.cod}`)
         btnAdd.addEventListener('click', () => {
-            /* Swal.fire({
-                position: 'top',
-                icon: 'success',
-                title: 'Producto agregado con exito!',
-                showConfirmButton: false,
-                timer: 1500
-            }) */
             addToCart(element.cod)
-
         })
 
     });
 }
 
-
+//Función de filtro de búsqueda.
 searcher.addEventListener('input', (product) => {
     let searching = allProducts.filter(element => element.nombre.toLocaleLowerCase().includes(product.target.value.toLocaleLowerCase()))
     if (searching == false) {
@@ -70,15 +67,18 @@ searcher.addEventListener('input', (product) => {
     showAllp(searching)
 });
 
+//Función de filtro por Ofertas.
 showOffers.addEventListener('click', () => {
     let sOnlyOffer = allProducts.filter(element => element.nombre.includes('OFERTA'))
     showAllp(sOnlyOffer);
 })
 
+//Función para volver a mostrar todos los productos.
 showAll.addEventListener('click', () => {
     showAllp(allProducts);
 })
 
+//Funcion de agregar al carrito.
 function addToCart(cod) {
     let existe = cart.find(item => item.cod === cod)
     if (existe) {

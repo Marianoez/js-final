@@ -2,14 +2,16 @@ let cartHTML = document.getElementById('cart')
 const clearBtn = document.getElementById('clearCart')
 const payBtn = document.getElementById('payBtn')
 
+//Boton Vaciar Carrito.
 clearBtn.addEventListener('click', () => {
     cleanCart();
 })
 
+//Generamos cart, y recuperamos información de carrito llamando a función recuperar.
 let cart = []
 recuperar()
 
-
+//Boton de finalizar Compra.
 payBtn.addEventListener('click', () => {
     Swal.fire({
         position: 'top',
@@ -25,7 +27,7 @@ payBtn.addEventListener('click', () => {
 
 })
 
-
+//Funcion de recuperación datos de carrito desde Local Storage.
 function recuperar() {
     cartHTML.innerHTML = ""
     cart = []
@@ -33,7 +35,6 @@ function recuperar() {
     recuperarLS.forEach(element => {
         showCart(element)
         cart.push(element)
-        console.log('1', cart)
     })
     console.log('2', cart)
     const totalBuy = cart.reduce((acc, el) => acc + (el.precio * el.cantidad), 0)
@@ -42,18 +43,13 @@ function recuperar() {
     console.log('3', cart)
 }
 
-/* function totalCarrito() {
-    const totalBuy = cart.reduce((acc, el) => acc + (el.precio * el.cantidad), 0)
-    let p = document.getElementById('total1')
-    p.innerText = `TOTAL: ${totalBuy}`
-} */
-
-
+//Función de vaciar carrito desde Local Storage.
 function cleanCart() {
     localStorage.clear()
     recuperar()
 }
 
+//Función para mostrar todos los productos que se recuperaron de carrito.
 function showCart(car) {
     let div = document.createElement('div')
     div.className = 'product';
@@ -74,11 +70,10 @@ function showCart(car) {
                 </div>`;
     cartHTML.appendChild(div)
 
+    //Boton de eliminar 1 producto.       
     let btnDelete = document.getElementById(`btnDelete${car.cod}`)
 
     btnDelete.addEventListener('click', () => {
-        /* console.log(car.cod);
-        console.log(cart) */
         if (car.cantidad == 1) {
             btnDelete.parentElement.parentElement.parentElement.remove();
             cart = cart.filter(item => item.cod !== car.cod)
