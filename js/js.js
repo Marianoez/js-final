@@ -30,7 +30,7 @@ function showAllp(products) {
         let newDiv = document.createElement('div')
         newDiv.className = 'product';
         newDiv.innerHTML = `<div class="card" style="width: 18rem;">
-        <img src=${element.imgurl} class="card-img-top" alt="Bozal de cuero, caballo carreras, salto exhibición y Polo">
+        <img src=${element.imgurl} class="card-img-top" alt=${element.descripcion}>
         <!-- SEO, agregamos palabras clave caballo carreras, polo, salto  -->
         <div class="card-body">
             <h5 class="card-title">${element.nombre}</h5>
