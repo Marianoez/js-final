@@ -1,0 +1,21 @@
+@import '../base/variables';
+@import '../base/extends';
+@import '../base/mixings';
+.productos-title {
+    @extend %titles-cfg-std;
+}
+
+.buttons1 {
+    @extend %cfg-flex-ctr;
+}
+
+.main-productos {
+    @extend %cfg-flex-ctr;
+}
+
+.card {
+    @include dfg-alig(flex, center);
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin: 1rem;
+}

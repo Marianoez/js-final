@@ -1,0 +1,18 @@
+/* Listas*/
+
+$colores:
+red,
+green,
+blue,
+black,
+white;
+
+.button-ok {
+    /* Funcion nth()*/
+    background-color: nth($colores, 3);
+
+}
+
+.button-cancel {
+    background-color: nth($colores, 4);
+}

@@ -1,0 +1,9 @@
+@mixin dfg-std($dsp, $flx-dir) {
+    display: $dsp;
+    flex-direction: $flx-dir;
+}
+
+@mixin dfg-alig($dsp-1, $alig-1) {
+    display: $dsp-1;
+    align-items: $alig-1;
+}

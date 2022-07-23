@@ -1,0 +1,6 @@
+Cambie Animaciones de Contacto que no iban con el resto de la página, por background de la paleta de colores
+y la misma animación que en Header.
+Reordene un poco mas los archivos sass.
+Agregue algunos colores más en las páginas.
+Di un poquito de margin.
+Subi la página a internet.

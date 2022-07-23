@@ -1,0 +1,47 @@
+@import '../base/extends';
+@import '../base/mixings';
+
+#nosotros {
+    display: inline-block;
+    margin: 40px 0px ;
+    align-items: center;
+}
+
+#nosotros {
+    display: inline-block;
+    margin: 40px 0px ;
+    align-items: center;
+
+}
+
+.nosotros-title{
+    @extend %titles-cfg-std;
+}
+
+.nosotros-content {
+    @include dfg-std(flex, row);
+    align-items: center;
+    width: 100%; 
+    padding-top: 2%;      
+}
+
+#nosotros .video {    
+    width: 100%;
+    padding-left: 1%;
+}
+
+.parrafo-nosotros {
+    font-size: 1rem;
+    padding-left: 2%;
+}
+
+.ubicacion {   
+    display: flex;
+    justify-content: center;
+    padding-top: 2%;
+    padding-bottom: 2%
+}
+
+.ubicacion-title {
+    @extend %titles-cfg-std;
+}

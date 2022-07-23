@@ -1,0 +1,50 @@
+@import '../base/extends';
+@import '../base/mixings';
+@import '../base/variables';
+
+
+.contacto-title {
+    @extend %titles-cfg-std;    
+}
+
+.iconos-contacto { 
+    display: flex;   
+    justify-content: space-around;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    color: $titles-colors;   
+}
+
+.phone {
+    margin-bottom: 200px;
+}
+
+.phone, .email {
+    @include dfg-alig(flex, center);
+    justify-content: space-around;
+    transition: all 1s linear;
+    border-radius: 2rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5%;
+    text-decoration: none;
+}
+
+.phone:hover {
+    background-color: $bg-color-footer;
+}
+
+.email:hover {    
+    background-color: $bg-color-footer;
+}
+
+.phone-number, .email-adress {
+    color: $titles-colors;
+    padding-left: 10%;
+    font-size: 2rem;
+    width: 300px;
+}
+
+.iconos-contacto div div a {
+    color: $titles-colors;
+}

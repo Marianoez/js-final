@@ -1,0 +1,49 @@
+@import '../base/variables';
+@import '../base/extends';
+
+
+.ofertas {
+    margin-top: 2%;
+}
+
+.contenedor-ofertas {
+    padding-top: 1.5%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.imagen-oferta {    
+    width: 20vw;
+    height: 50vh;
+    border-radius: 10%;
+    transition: all 3s ease;
+}
+
+.imagenes-oferta:hover .imagen-oferta {
+    transform: scale(1.5);
+}
+
+.of1, .of2, .of3, .of4{
+    padding: 1%;
+}
+
+.imagenes-oferta {
+    overflow: hidden;
+    border-radius: 10%;
+    h3 {
+        text-align: center;
+        color: $titles-colors;    
+    }       
+}
+
+.ofertas-title {
+    @extend %titles-cfg-std;
+    margin-top: 2%;
+    padding-bottom: 2%;
+}
+
+.encabezado-oferta {
+    background-color: $bg-color-header;
+    padding: 0 10%;
+    border-radius: 2rem;
+}

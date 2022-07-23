@@ -1,0 +1,63 @@
+ @import '../base/variables';
+ 
+ 
+ header {
+    background-color: $bg-color-header;
+    font-family: $font-family-std;
+    color: $titles-colors;    
+}
+
+.navbar {
+    border-bottom: 2px solid $titles-colors;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#navbarNavAltMarkup {
+    justify-content: center;
+}
+.imagen-logo {
+    width: 5rem;
+}
+.navbar {
+    background-color: #e3b8b5;
+    border-bottom: 2px solid $titles-colors;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#navbarNavAltMarkup {
+    justify-content: center;
+}
+
+
+.nav-link {
+    text-decoration: none;
+    text-align-last: justify;
+    color: #7b2828;
+    padding: 1.5vh 8vh; 
+    font-family: 'Raleway', sans-serif;
+    transition: all 1s linear;    
+    text-decoration: none;    
+}   
+
+#nav-tex1, #nav-tex2, #nav-tex3, #nav-tex4, 
+
+#nav-tex5 {
+    color: $titles-colors;
+    font-size: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin: 0px 2px;
+    transition: all 1s linear;
+    border-radius: 4rem;       
+}
+
+#nav-tex1:hover, #nav-tex2:hover, 
+#nav-tex3:hover, #nav-tex4:hover, 
+#nav-tex5:hover {
+    background-color: $bg-color-footer;    
+}
+.menu-nav-uno:hover {
+    background-color: $bg-color-footer;        
+}

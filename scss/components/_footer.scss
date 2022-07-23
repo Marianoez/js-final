@@ -1,0 +1,56 @@
+@import '../base/extends';
+@import '../base/mixings';
+@import '../base/variables';
+footer {
+    justify-items: center;
+    text-align: center;
+    color: $titles-colors;
+    border-top: 2px solid $titles-colors;
+    border-bottom: 2px solid $titles-colors; 
+    background-color: $bg-color-footer;
+    font-style: italic;
+    padding-top: 1%;
+    margin-top: 2%;   
+    text-decoration: none;
+}
+footer h4 {
+    padding-bottom: 1%;
+}
+
+.ig:hover, .fb:hover {
+    background-color: $bg-color-header;
+    color: $titles-colors;    
+}
+
+footer nav div div a {    
+    color: $titles-colors;
+    font-size: 1.5rem;
+}
+
+footer nav a {
+    color: $titles-colors;
+    text-decoration: none;
+}
+
+.ig, .fb {
+    @include dfg-alig(flex, center);
+    justify-content: center ;
+    width: auto;
+    margin-left: 2px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    transition: all 1s linear;
+    border-radius: 2rem;
+    text-decoration: none;
+    padding: 0.5%;
+}
+
+
+.ig-text, .fb-text {
+    margin-left: 1%;
+}
+
+.copyright{
+    text-decoration: none;
+    color: $titles-colors;
+}

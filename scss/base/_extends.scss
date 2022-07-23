@@ -1,0 +1,26 @@
+@import 'variables';
+%titles-cfg-std {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-decoration: none;
+    font-family: $font-family-std;
+    background-color: $bg-color-header;
+    color: $titles-colors;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding: 0 2rem;
+    border-radius: 5rem;
+    text-align: center;
+}
+
+%cfg-flex-ctr {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+%margin-std {
+    margin-left: 1%;
+    margin-right: 1%;
+}
